@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp">
+
+<p>rootScope taki sayi {{sayi}}</p>
+
+
+<div  ng-controller="myCtrl">
+    <p> controller scope taki sayi:</p>
+    {{sayi}}
+</div>
+
+<p>şimdi rootScope taki sayi: {{sayi}}</p>
+
+<script>
+
+    var app=angular.module('myApp' , []);
+
+    app.run(function ($rootScope) {
+        $rootScope.sayi=123;
+    });
+
+    app.controller('myCtrl' , function ($scope) {
+        $scope.sayi=321;
+    });
+
+
+
+</script>
+
+
+</body>
+</html>

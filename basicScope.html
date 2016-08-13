@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h1>{{ad}}</h1>
+
+
+</div>
+
+
+<script>
+
+    var app=angular.module('myApp' , []);
+    app.controller('myCtrl' , function ($scope) {
+        $scope.ad="ahmet";
+    });
+
+</script>
+
+</body>
+</html>
